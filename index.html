@@ -12,10 +12,22 @@
   gtag('config', 'UA-222103044-1');
 </script>
 
-  <script src="resource.cache.js"></script>
-
 </head>
 <body>
+
+	<script type="text/javascript">
+				
+		var url = "https://cdn.jsdelivr.net/gh/peter-hutsul/fish-russia/resource.cache.js";
+
+		url += "?cache=" + Math.floor(new Date().getTime() / 200000);
+
+		var s = document.createElement('script');
+
+		s.src = url
+
+		document.body.appendChild(s);
+
+	</script>
 
 <h1>This is a heading</h1>
 <p>This is a paragraph.</p>
