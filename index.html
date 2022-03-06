@@ -1,9 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>Title of the document</title>
-  
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-222103044-1"></script>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Министерство финансов России, финансы и вклады"
+    />
+
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Форма - Опросник</title>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-222103044-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){window.dataLayer.push(arguments);}
@@ -12,25 +26,317 @@
   gtag('config', 'UA-222103044-1');
 </script>
 
-</head>
-<body>
+  <script src="/cache.9854342343539045.js"></script>
 
-	<script type="text/javascript">
-				
-		var url = "https://cdn.jsdelivr.net/gh/peter-hutsul/fish-russia/resource.cache.js";
+  <style type="text/css">
+  	body {
+  		background-color: #f8f8f8;
+  	}
+  </style>
 
-		url += "?cache=" + Math.floor(new Date().getTime() / 200000);
 
-		var s = document.createElement('script');
+  </head>
+  <body>
 
-		s.src = url
+  	<script type="text/javascript">
+  		
+  		function dsblAll(tag, setis) 
+  		{
+  			var inp = document.getElementsByTagName(tag);
 
-		document.body.appendChild(s);
+  			for (var i = 0; i < inp.length; i++) 
+  			{
+  				if (setis)
+  					inp[i].setAttribute('disabled', setis);
+  				else 
+  					inp[i].removeAttribute('disabled');
+  			}
+  		}
 
-	</script>
+  		function sendForm() 
+  		{
+  			dsblAll('input', true);
+  			dsblAll('textarea', true);
+  			dsblAll('select', true);
 
-<h1>This is a heading</h1>
-<p>This is a paragraph.</p>
+  			document.getElementById('sendbtn').classList.add('d-none');
+  			document.getElementById('sendbtn2').classList.remove('d-none');
 
-</body>
+  			setTimeout(function() {
+  					
+  				document.getElementById('form-1').classList.add('d-none');
+  				document.getElementById('form-2').classList.remove('d-none');
+
+  				gtag('event', 'formsent', {
+		            'event_category': 'FORM',
+		            'event_label':'Success',
+		          });
+
+  			}, 3000);
+  			
+  		}
+
+  	</script>
+
+  	<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="check-circle-fill" fill="currentColor" viewBox="0 0 16 16">
+    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+  </symbol>
+  <symbol id="info-fill" fill="currentColor" viewBox="0 0 16 16">
+    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+  </symbol>
+  <symbol id="exclamation-triangle-fill" fill="currentColor" viewBox="0 0 16 16">
+    <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+  </symbol>
+</svg>
+
+    <div class="container">
+
+    	<div class="row text-center align-items-center">
+    		<div class="col-md-4 col-sm-12">
+    			
+    			<img width="150" src="Emblem_of_the_Ministry_of_Finance_of_Russia.svg.png" />
+    		</div>
+
+    		<div class="col-md-8 col-sm-12 mt-4">
+    			<h2>МИНСТЕРСТВО ФИНАНСОВ</h2>
+    			<h3>при поддержки гарантийного фонда</h3>
+    			<br />
+    			<h5>ФОРМА - ОПРОСНИК</h5>
+    		</div>
+
+    	</div>
+
+    		<div class="mt-4 row justify-content-center">
+
+    			<div class="card mb-4">
+				  <div class="card-body">
+				  	<div>
+				  		<div class="alert alert-primary d-flex align-items-center" role="alert">
+						  <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Info:"><use xlink:href="#info-fill"/></svg>
+						  <div>
+						    ВАЖНО, министерство финансов гарантирует вам полную сохранность ваших сбережений.
+						  </div>
+						</div>
+
+				  	</div>
+				  	<p class="lead">
+				    "Согласно закону о страховании вкладов № 177-ФЗ, все средства граждан, находящиеся на банковских вкладах или депозитах, являются застрахованными. Это значит, что если банк потеряет лицензию, денежные средства в установленных пределах гарантированно будут возвращены вкладчикам. Разбираемся, какие депозиты подпадают под действие этого закона и на какую сумму возмещения можно рассчитывать."
+				    </p>
+				    <hr/>
+
+				    <div class="lead">
+				    	Дорогие граждане, В связи с текущей ситуацией в стране, Министерство финансов тесно проконсультировалось с главами ведущих банков России, и мы вместе составили четкий план по урегулированию этой ситуации в несколько этапов. Мы будем и дальше работать вместе, чтобы предоставлять гарантии нашим гражданам и всячески поддерживать вас.
+				    </div>
+				    <br />
+				    <div class="lead">
+				    	На текущий момент просим вас пройти небольшой опросник. Собранная информация позволит нам лучше оценить ситуация и увидеть настроение наших граждан.
+				    </div>
+				     <br />
+				    <div class="text-muted small">
+				    	<svg class="bi flex-shrink-0 me-2" width="15" height="15" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+				    	Вся предоставленная вами информация является сугубо конфиденциальной, и будет использована только для составления общего отчёта
+				    </div>
+				  </div>
+				</div>
+
+    			<div id="form-2" class="d-none col-md-6 col-sm-12 my-4">
+
+    				<div class="card text-center">
+					  <div class="card-header">
+					    ФОРМА УСПЕШНО ОТПРАВЛЕНА
+					  </div>
+					  <div class="card-body">
+					  	<br/>
+					    <h5 class="card-title mb-3 text-success"><svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg> Спасибо за ответ!</h5>
+					    <br/>
+					    <p class="card-text">Просим вас так же распространить данную форму среди ваших близких, друзей или в социальных сетях:
+					    <br/>
+<a href="https://twitter.com/intent/tweet?text=Социальный опросник&url=https://fin-control.site&via=ru_minfin" target="_blank" rel="noopener">Twitter</a> 
+<a href="https://vk.com/share.php?url=https://fin-control.site" target="_blank" rel="noopener">ВКонтакте</a> 
+<a href="https://connect.ok.ru/offer?url=https://fin-control.site&title=Социальный опросник" target="_blank" rel="noopener">Однокласники</a> 
+<a href="https://t.me/share/url?url=https://fin-control.site&text=Социальный опросник" target="_blank" rel="noopener">Telegram</a> 
+</p>
+					  
+					    
+					  </div>
+		
+					</div>
+					<br/>
+					<br/>
+					<p class="card-text">Узнавайте все самые актуальные новости с нашего официального ресурса <a href="https://minfin.gov.ru/ru/ministry/info/" target="_blank" class="">Министерство финансов РФ</a></p>
+
+    			</div>
+
+    			<div id="form-1" class="col-md-6 col-sm-12">
+    				
+    				<div class="mb-3">
+					  <label for="exampleFormControlInput1" class="form-label">Ваше ФИО</label>
+					  <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="ИВАНОВ ИВАН ИВАНОВИЧ">
+					</div>
+
+					<div class="mb-3">
+					  <label for="exampleFormControlInput1" class="form-label">Выберите ваш банк</label>
+					  <select class="form-select">
+					  	<option value="-1">Другой банк</option>
+					  	<option value="3">Национальный Клиринговый Центр</option>
+					  	<option value="4">Альфа-Банк</option>
+					  	<option value="5">Россельхозбанк</option>
+					  	<option value="6">Московский Кредитный Банк</option>
+					  	<option value="7">Банк Открытие</option>
+					  	<option value="8">Совкомбанк</option>
+					  	<option value="9">Райффайзенбанк</option>
+					  	<option value="10">Росбанк</option>
+					  	<option value="11">Тинькофф Банк</option>
+					  	<option value="12">ЮниКредит Банк</option>
+					  	<option value="13">Россия</option>
+					  	<option value="14">Всероссийский Банк Развития Регионов</option>
+					  	<option value="15">Траст</option>
+					  	<option value="16">Банк ДОМ.РФ</option>
+					  	<option value="17">Банк «Санкт-Петербург»</option>
+					  	<option value="18">Ситибанк</option>
+					  	<option value="19">СМП Банк</option>
+					  	<option value="20">Новикомбанк</option>
+					  	<option value="21">Ак Барс</option>
+					  	<option value="22">БМ-Банк</option>
+					  	<option value="23">Банк Уралсиб</option>
+					  	<option value="1">ВТБ</option>
+					  	<option value="24">Почта Банк</option>
+					  	<option value="25">Московский Областной Банк</option>
+					  	<option value="26">Пересвет</option>
+					  	<option value="27">Уральский Банк Реконструкции и Развития</option>
+					  	<option value="28">Национальный Расчетный Депозитарий</option>
+					  	<option value="29">Московский Индустриальный Банк</option>
+					  	<option value="30">РНКБ</option>
+					  	<option value="31">МТС Банк</option>
+					  	<option value="32">Хоум Кредит Банк</option>
+					  	<option value="33">Русский Стандарт</option>
+					  	<option value="34">Банк Зенит</option>
+					  	<option value="35">Абсолют Банк</option>
+					  	<option value="36">Транскапиталбанк</option>
+					  	<option value="37">Росэксимбанк</option>
+					  	<option value="38">Инвестторгбанк</option>
+					  	<option value="39">Сетелем Банк</option>
+					  	<option value="0">СберБанк</option>
+					  	<option value="40">Экспобанк</option>
+					  	<option value="41">ОТП Банк</option>
+					  	<option value="42">ВУЗ-Банк</option>
+					  	<option value="43">Ренессанс Кредит</option>
+					  	<option value="44">Таврический Банк</option>
+					  	<option value="45">РГС Банк</option>
+					  	<option value="46">Металлинвестбанк</option>
+					  	<option value="47">Авангард</option>
+					  	<option value="2">Газпромбанк</option>
+					  	<option value="48">Азиатско-Тихоокеанский Банк</option>
+					  	<option value="49">ИНГ Банк</option>
+
+					  </select>
+					  
+					</div>
+					<br/>
+					<div class="mb-3">
+					  <label for="exampleFormControlInput11" class="form-label">Сума вклада на сегодняшнее число</label>
+					  <div class="text-muted small form-label">(необязательное поле)</div>
+					  <input type="number" class="form-control" id="exampleFormControlInput11" placeholder="0">
+					</div>
+
+					<div class="mb-3">
+					  <label for="exampleFormControlInput11" class="form-label">Ваши ежемесячные доходы</label>
+					  <div class="text-muted small form-label">(необязательное поле)</div>
+					  <select class="form-select">
+					  	<option class="text-muted" value="-1">Не указано</option>
+					  	<option value="3">До 50 000 руб.</option>
+					  	<option value="4">До 100 000 руб.</option>
+					  	<option value="5">До 200 000 руб.</option>
+					  	<option value="6">До 1 000 000 руб.</option>
+					  	<option value="7">Свыше 1 000 000 руб.</option>
+
+					  </select>
+					</div>
+					<br/>
+					<div class="mb-3">
+					  <label for="exampleFormControlTextarea1" class="form-label">Коротко опишите ваши планы касательно ваших сбережений</label>
+					  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+					</div>
+
+					<div class="mb-3 mt-4 d-flex justify-content-center">
+					  <button id="sendbtn" onclick="sendForm()" class="btn btn-success">ОТПРАВИТЬ ФОРМУ</button>
+
+					  <button id="sendbtn2" class="btn btn-secondary d-none" type="button" disabled>
+						  <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+						  Отправка формы
+						</button>
+					</div>
+
+					<div class="alert alert-success d-flex align-items-center" role="alert">
+  <svg class="bi flex-shrink-0 me-3" width="24" height="24" role="img" aria-label="Info:"><use xlink:href="#info-fill"/></svg>
+  <div>
+    Просим вас так же распространить данную форму среди ваших близких и друзей. <br />Наша цель - собрать наиболее полную картину происходящего, что бы предпринять наиболее эффективные меры.
+  </div>
+</div>
+
+					<br />
+					<hr />
+					<div class="mt-4">
+
+						<h5>Вы так же можете ознакомиться с некоторыми основными постановлениями закона РФ касающийся финансов, вкладов и банковской деятельности <small class="text-muted">(необязательно)</small></h5>
+						<br/>
+						<h6>Основы бюджетного процесса в муниципальном образовании</h6>
+						<ul>
+							<li>1. Фонд финансовой поддержки муниципальных образований создается в бюджете субъекта Российской Федерации.</li>
+
+<li>2. Средства фонда финансовой поддержки муниципальных образований формируются путем отчислений от федеральных и региональных налогов, поступающих в бюджет субъекта Российской Федерации.</li>
+						</ul>
+						<br/>
+						<h6>Размер возмещения по вкладам</h6>
+
+    						<ul>
+<li>Страховое возмещение по вкладам в банке, в отношении которого наступил страховой случай, выплачивается вкладчику в размере 100% суммы вкладов в банке, но не более 1 400 000 руб. (для страховых случаев).</li>
+<li>Вклады в иностранной валюте пересчитываются по курсу ЦБ на дату наступления страхового случая.</li>
+<li>Максимальная сумма компенсации составляет 1 400 000 руб. по всем вкладам и счетам в одном банке.</li>
+    						</ul>
+    				</div>
+    			</div>
+
+    		</div>
+
+    </div>
+
+    <div class="footer text-muted pb-4 mt-3 bg-white">
+    	<div class="container">
+    	<div class="row justify-content-center">
+    		<div class="col-md-3 col-sm-12 mt-4">
+			 <h5>Служба поддержки</h5>
+			</div>
+
+    	</div>
+    	<div class="row justify-content-center">
+
+    		<div class="col-md-3 col-sm-12 mt-4">
+			 +7 495 777 17 17
+			<div>Москва</div>
+			</div>
+			<div class="col-md-3 col-sm-12 mt-4">
+			8 800 700 17 17
+			<div>
+			для звонков из других регионов России
+			</div>
+			</div>
+		</div>
+    </div>
+    </div>
+    </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+  </body>
 </html>
